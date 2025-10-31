@@ -31,3 +31,5 @@ export interface Customer {
     phones: Phone[];
     emails: Email[];
 }
+
+export type SearchParams = Record<string, string | undefined>;

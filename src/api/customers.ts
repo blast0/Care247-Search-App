@@ -4,7 +4,7 @@ const BASE_URL = 'http://localhost:3001';
 export async function searchCustomers(params: Record<string, string | undefined>): Promise<Customer[]> {
 
   const queryString = Object.entries(params)
-    .filter(([key, value]) => value !== undefined && value !== '') // remove empty or undefined values
+    .filter(([, value]) => value !== undefined && value !== '') // remove empty or undefined values
     .map(([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(value as string)}`)
     .join('&');
 
