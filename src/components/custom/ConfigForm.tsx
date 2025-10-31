@@ -61,10 +61,8 @@ export const ConfigForm = ({ fields, onSearch }: ConfigFormProps) => {
       </div>
 
       <div className="flex gap-2">
-        <Button type="submit">Search</Button>
-        <Button type="button" onClick={() => { setConfig({}); onSearch({}); }}>
-          Reset
-        </Button>
+        <Button variant="default" type='submit' className='px-4 py-2 bg-blue-600 text-white rounded-md cursor-pointer'>Search</Button> 
+        <Button className="cursor-pointer" onClick={()=>{setConfig({});onSearch({});}}>Reset</Button>
       </div>
     </form>
   );
